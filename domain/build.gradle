@@ -1,0 +1,9 @@
+apply plugin: 'java'
+
+dependencies {
+    testCompile "junit:junit:$rootProject.ext.junitVersion"
+    testCompile "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

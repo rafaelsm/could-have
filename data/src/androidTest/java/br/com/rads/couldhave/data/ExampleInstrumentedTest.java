@@ -1,4 +1,4 @@
-package br.com.rads.couldhave;
+package br.com.rads.couldhave.data;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("br.com.rads.couldhave", appContext.getPackageName());
+        assertEquals("br.com.rads.couldhave.data.test", appContext.getPackageName());
     }
 }
