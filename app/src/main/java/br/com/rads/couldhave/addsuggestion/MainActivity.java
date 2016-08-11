@@ -11,17 +11,13 @@ import br.com.rads.couldhave.domain.model.Suggestion;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends BaseActivity implements AddSuggestionContract.View {
-
-    private AddSuggestionContract.UserAction actionListener;
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
-        actionListener = new AddSuggestionPresenter(new InMemorySuggestionRepository(),this);
     }
 
     @OnClick(R.id.add_suggestion_fab)
@@ -29,13 +25,4 @@ public class MainActivity extends BaseActivity implements AddSuggestionContract.
         startActivity(new Intent(MainActivity.this, AddSuggestionActivity.class));
     }
 
-    @Override
-    public void showSuggestions() {
-        //TODO: show suggestion list
-    }
-
-    @Override
-    public void updateSuggestionList(Suggestion newSuggestion) {
-        //TODO: update suggestionList
-    }
 }

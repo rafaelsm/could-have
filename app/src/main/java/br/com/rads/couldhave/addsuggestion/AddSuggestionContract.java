@@ -9,8 +9,8 @@ import br.com.rads.couldhave.domain.model.Suggestion;
 public interface AddSuggestionContract {
 
     interface View{
-        void showSuggestions();
-        void updateSuggestionList(Suggestion newSuggestion);
+        void successAddingSuggestion(Suggestion suggestion);
+        void failAddingSuggestion();
     }
 
     interface UserAction{

@@ -24,6 +24,6 @@ public class AddSuggestionPresenter implements AddSuggestionContract.UserAction 
         Suggestion suggestion = new Suggestion(name);
         suggestion.setDescription(description);
         useCase.execute(suggestion);
-        addSuggestionView.updateSuggestionList(suggestion);
+        addSuggestionView.successAddingSuggestion(suggestion);
     }
 }

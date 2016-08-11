@@ -17,7 +17,16 @@ public class InMemorySuggestionRepository implements SuggestionRepository {
     private SuggestionEntityMapper entityMapper;
     private List<SuggestionEntity> suggestions;
 
-    public InMemorySuggestionRepository() {
+    private static InMemorySuggestionRepository instance = null;
+
+    public static InMemorySuggestionRepository getInstance(){
+        if (instance == null){
+            instance = new InMemorySuggestionRepository();
+        }
+        return instance;
+    }
+
+    private InMemorySuggestionRepository() {
         this.entityMapper = new SuggestionEntityMapper();
         this.suggestions = new ArrayList<>();
     }

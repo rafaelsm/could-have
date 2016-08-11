@@ -36,7 +36,7 @@ public class InMemorySuggestionRepositoryTest {
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
-        inMemorySuggestionEntityStore = new InMemorySuggestionRepository();
+        inMemorySuggestionEntityStore = InMemorySuggestionRepository.getInstance();
     }
 
     @Test

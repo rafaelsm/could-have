@@ -51,11 +51,13 @@ public class AddSuggestionActivityTest {
         onView(withId(R.id.add_suggestion_button)).perform(click());
         assertFalse(activityTestRule.getActivity().isFinishing());
 
-        onView(withId(R.id.add_suggestion_title_edit_text)).perform(typeText("my"), closeSoftKeyboard());
+        onView(withId(R.id.add_suggestion_title_edit_text)).perform(typeText(""), closeSoftKeyboard());
         onView(withId(R.id.add_suggestion_button)).perform(click());
         assertFalse(activityTestRule.getActivity().isFinishing());
+    }
 
-        onView(withId(R.id.add_suggestion_title_edit_text)).perform(clearText());
+    @Test
+    public void addSuggestion_successCase() throws Exception {
         onView(withId(R.id.add_suggestion_title_edit_text)).perform(typeText(SUGGESTION_TITLE), closeSoftKeyboard());
         onView(withId(R.id.add_suggestion_button)).perform(click());
         assertTrue(activityTestRule.getActivity().isFinishing());
