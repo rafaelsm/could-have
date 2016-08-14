@@ -1,10 +1,12 @@
 package br.com.rads.couldhave.domain.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Rafael on 7/25/16.
  */
 
-public class Suggestion {
+public class Suggestion implements Serializable{
 
     private String name;
     private String description;
